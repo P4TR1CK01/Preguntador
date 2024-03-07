@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <title>Preguntador</title>
+
+</head>
+<body>
+  <h1>Esta es una aplicacion muy educada, saludos a todos</h1>
+  <h2 class="text-center text-success" id="saludador"></h2>
+
+  <ul>
+    <li>¿como te llamas? <span id="nombre_usuario"></span></li>
+    <li>Usted es un/a <span id="profesion" profesion></span></li>
+    <li>Usted gana <span id="salario"salario></span></li>
+    <li>Su lugar de residencia es <span id="residencia"></span></li>
+    <li>El numero a continuacion de su numero es <span id="numero"></span></li>
+  </ul>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<!--script interno-->
+  <script>
+//1. Preguntamos al usuario su nombre, y lo dejamos en la variable "nombre_usuario"
+    const pregunta = "hola, ¿como te llamas?"
+    const nombre_usuario = prompt(pregunta)
+
+
+
+//2. preguntamos al usuario su profesion, y lo dejamos en la variable"profesion"
+    const pregunta2 = "¿cual es tu profesion?"
+    const profesion = prompt(pregunta2)
+    
+//3. Le preguntamos, con incomodidad, cuánto gana. y lo dejaos en la variable "salario"
+    const pregunta3 ="¿cuanto ganas?"
+    const salario = prompt(pregunta3)
+
+//4. preguntamos al usuario su residencia, y lo dejamos en la variable "residencia"
+    const pregunta4 ="¿donde vives?"
+    const residencia = prompt(pregunta4)
+
+//5. preguntamos al usuario su numero
+const pregunta5 = "escriba un numero"
+const numero = prompt(pregunta5)
+const suma = parseInt(numero)
+const total = suma + 1
+
+//6. muestro la variable "numero" y el total con la suma de 1
+$("#numero").html(numero + " y el número superior es " + total)
+
+
+//usando jquerry, $ es un alias de jquery
+
+//4. creamos la variable "saludo"
+    const saludo = "hola " + nombre_usuario + " un gusto conocerte"
+
+
+
+//5. mostamos la variable "saludo" con el elemento con id "saludador" en HTML
+    $("#saludador").html(saludo)
+
+    $("#nombre_usuario").html(nombre_usuario)
+
+//6. muestro la variable "profesion" en el html (usando jquerry)
+    $("#profesion").html(profesion)
+
+//7. muestro la variable "salario" en el html (usando jquerry)
+    $("#salario").html(salario)
+
+//8. muestro la variable "residencia" 
+    $("#residencia").html(residencia)
+
+//9. muestro la variable "numero" y el total con la suma de 1
+    $("#numero").html(total)
+
+
+  </script>
+</body>
+
+</html>
+
